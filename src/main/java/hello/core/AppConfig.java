@@ -25,7 +25,7 @@ public class AppConfig {
         return new MemoryMemberRepositry();
     }
 
-    @Bean
+    @Bean(name="orderService")
     public OrderService orderService() {
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
